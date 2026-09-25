@@ -84,8 +84,8 @@ label,[data-testid="stWidgetLabel"] p{color:#e2e8f0 !important}
   box-shadow:0 8px 22px rgba(239,68,68,.2);
   font-size:21px
 }
-.brand-title{font-size:38px;font-weight:900;letter-spacing:-1.2px;line-height:1.02;color:#ffffff !important;text-shadow:0 2px 18px rgba(0,0,0,.35)}
-.brand-sub{font-size:13px;color:#cbd5e1 !important;font-weight:700;letter-spacing:1.8px;margin-top:8px;text-transform:uppercase}
+.brand-title{font-size:52px !important;font-weight:900 !important;letter-spacing:-1.8px;line-height:.98;color:#ffffff !important;text-shadow:0 3px 22px rgba(0,0,0,.55);display:block;white-space:nowrap}
+.brand-sub{font-size:16px !important;color:#e2e8f0 !important;font-weight:800 !important;letter-spacing:2.2px;margin-top:10px;text-transform:uppercase;line-height:1.25}
 .status{
   display:flex;align-items:center;gap:8px;
   border:1px solid rgba(34,197,94,.24);
@@ -101,11 +101,13 @@ label,[data-testid="stWidgetLabel"] p{color:#e2e8f0 !important}
   padding:13px 14px;position:relative;overflow:hidden
 }
 .kpi:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--accent)}
-.kpi-label{font-size:11px;letter-spacing:1.5px;color:#a9b8c9 !important;font-weight:900}
-.kpi-value{font-size:38px;color:#ffffff !important;font-weight:900;line-height:1;margin-top:9px}
+.kpi-label{font-size:13px !important;letter-spacing:1.7px;color:#d5dfeb !important;font-weight:900 !important}
+.kpi-value{font-size:42px;color:#ffffff !important;font-weight:900;line-height:1;margin-top:9px}
 
-.section-label{font-size:11px;line-height:1.2;letter-spacing:2px;color:#67e8f9 !important;font-weight:900;text-transform:uppercase}
-.section-title{font-size:28px;line-height:1.15;font-weight:900;color:#ffffff !important;letter-spacing:-.5px;margin:5px 0 14px;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.section-label{font-size:12px;line-height:1.2;letter-spacing:2px;color:#67e8f9 !important;font-weight:900;text-transform:uppercase}
+.section-title{font-size:34px !important;line-height:1.12;font-weight:900 !important;color:#ffffff !important;letter-spacing:-.7px;margin:6px 0 16px;text-shadow:0 3px 16px rgba(0,0,0,.55);display:block}
+
+.section-subtitle{font-size:13px;color:#a9b8c9 !important;margin-top:-8px;margin-bottom:16px;letter-spacing:.2px}
 
 .map-card{
   border:1px solid var(--line);border-radius:17px;
@@ -118,8 +120,8 @@ label,[data-testid="stWidgetLabel"] p{color:#e2e8f0 !important}
   padding:16px;min-height:100%
 }
 .command-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
-.case-id{font-size:28px;color:#ffffff !important;font-weight:900;letter-spacing:-.6px}
-.case-meta{font-size:13px;color:#b7c4d3 !important;margin-top:5px}
+.case-id{font-size:32px !important;color:#ffffff !important;font-weight:900 !important;letter-spacing:-.7px}
+.case-meta{font-size:15px !important;color:#d2dce8 !important;margin-top:6px;font-weight:600}
 .badge{display:inline-block;padding:5px 9px;border-radius:999px;font-size:10px;font-weight:900;letter-spacing:.8px}
 .critical{color:#fecaca;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.28)}
 .high{color:#fde68a;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.28)}
@@ -131,8 +133,8 @@ label,[data-testid="stWidgetLabel"] p{color:#e2e8f0 !important}
   border:1px solid rgba(34,211,238,.15);
   background:radial-gradient(circle at 50% 40%,rgba(34,211,238,.10),transparent 65%)
 }
-.score{font-size:46px;color:#ffffff !important;font-weight:900;line-height:1}
-.score-caption{font-size:10px;color:#9fb0c3 !important;letter-spacing:1.5px;font-weight:900;margin-top:7px}
+.score{font-size:54px !important;color:#ffffff !important;font-weight:900 !important;line-height:1}
+.score-caption{font-size:11px !important;color:#c1cfdd !important;letter-spacing:1.7px;font-weight:900 !important;margin-top:8px}
 
 .signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
 .signal{
@@ -140,8 +142,8 @@ label,[data-testid="stWidgetLabel"] p{color:#e2e8f0 !important}
   background:rgba(255,255,255,.025);
   border:1px solid rgba(148,163,184,.09)
 }
-.signal-label{font-size:9px;color:#93a4b8 !important;text-transform:uppercase;letter-spacing:1px;font-weight:900}
-.signal-value{font-size:14px;color:#f8fafc !important;font-weight:800;margin-top:4px}
+.signal-label{font-size:10px !important;color:#aebdcd !important;text-transform:uppercase;letter-spacing:1.1px;font-weight:900 !important}
+.signal-value{font-size:16px !important;color:#ffffff !important;font-weight:800 !important;margin-top:5px}
 
 .evidence{
   margin-top:8px;padding:9px;border-radius:10px;
@@ -149,7 +151,7 @@ label,[data-testid="stWidgetLabel"] p{color:#e2e8f0 !important}
   border:1px solid rgba(148,163,184,.09)
 }
 .evidence-label{font-size:9px;color:#93a4b8 !important;letter-spacing:1.2px;font-weight:900;text-transform:uppercase}
-.evidence-text{font-size:13px;color:#e2e8f0 !important;line-height:1.55;margin-top:5px}
+.evidence-text{font-size:15px !important;color:#f1f5f9 !important;line-height:1.6;margin-top:6px;font-weight:500}
 
 .cv-card{
   border:1px solid var(--line);border-radius:17px;
@@ -159,7 +161,7 @@ label,[data-testid="stWidgetLabel"] p{color:#e2e8f0 !important}
 .cv-chip{
   display:inline-block;padding:8px 11px;border-radius:9px;margin:3px;
   color:#dff9ff !important;background:rgba(34,211,238,.07);
-  border:1px solid rgba(34,211,238,.2);font-size:11px;font-weight:900
+  border:1px solid rgba(34,211,238,.2);font-size:13px !important;font-weight:900 !important
 }
 .image-frame{
   border-radius:13px;overflow:hidden;
@@ -190,6 +192,9 @@ div[data-testid="stButton"] button{
 div[data-testid="stButton"] button:hover{border-color:rgba(34,211,238,.55)}
 .footer{text-align:center;color:#71839a;font-size:10px;letter-spacing:.7px;margin-top:18px}
 @media(max-width:900px){
+  .brand-title{font-size:38px}
+  .brand-sub{font-size:11px;letter-spacing:1.2px}
+  .section-title{font-size:25px}
   .command-row{flex-direction:column;align-items:flex-start}
   .signal-grid{grid-template-columns:1fr}
 }
@@ -1284,8 +1289,9 @@ with command_col:
 
 st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
 st.markdown(
-    '<div class="section-label">AI EVIDENCE LAYER</div>'
-    '<div class="section-title">Computer Vision Evidence Intelligence</div>',
+    '<div class="section-label">COMPUTER VISION</div>'
+    '<div class="section-title">Computer Vision Evidence Intelligence</div>'
+    '<div class="section-subtitle">YOLO-based visual detections supporting incident priority</div>',
     unsafe_allow_html=True
 )
 
@@ -1325,8 +1331,9 @@ with cv_right:
 
 
 st.markdown(
-    '<div class="section-label">COMPUTER VISION OUTPUT</div>'
-    '<div class="section-title">YOLO Detection Evidence</div>',
+    '<div class="section-label">DETECTION OUTPUT</div>'
+    '<div class="section-title">YOLO Detection Evidence</div>'
+    '<div class="section-subtitle">Detected objects and annotated visual evidence from the computer vision model</div>',
     unsafe_allow_html=True
 )
 
