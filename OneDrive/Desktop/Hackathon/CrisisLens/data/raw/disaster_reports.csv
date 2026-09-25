@@ -1,0 +1,101 @@
+report_id,timestamp,report_text,latitude,longitude,source,disaster_type,severity,trapped_persons,resource_need
+R001,2026-09-23 06:40:12,"Overnight rain has flooded the lanes of Whitefield and water is now inside the ground floor of several houses. An elderly couple cannot get out on their own.",12.9698,77.7500,Citizen Report,Flood,High,2,Rescue
+R002,2026-09-23 07:15:33,"A fire has broken out on the first floor of an apartment block in Indiranagar. Residents on the upper floors are shouting for help and thick black smoke is filling the stairwell.",12.9719,77.6412,SMS/SOS Alert,Fire,Critical,2,Fire Services
+R003,2026-09-23 07:52:08,"Earth and rocks came down the slope near Sakleshpur after the rain and the highway is buried under mud. Traffic has stopped on both sides.",12.9430,75.7850,Police Control Room,Landslide,High,0,Road Clearance
+R004,2026-09-23 08:20:47,"Strong tremors were felt in Vijayapura for about fifteen seconds. People ran out of their houses in panic.",16.8302,75.7100,Citizen Report,Earthquake,Medium,0,None
+R005,2026-09-23 09:05:19,"Very strong winds from the cyclone have uprooted trees in Karwar and one tree has fallen on a house.",14.8135,74.1297,Volunteer Report,Cyclone,High,2,Rescue
+R006,2026-09-23 09:48:55,"An old two storey building has collapsed in Shivajinagar. At least four people are believed to be trapped under the debris.",12.9857,77.6050,News Desk,Building Collapse,Critical,4,Rescue
+R007,2026-09-23 10:22:31,"A bus and a lorry collided near Nelamangala and several passengers are injured inside the vehicles.",13.0990,77.3930,Police Control Room,Road Accident,High,2,Medical
+R008,2026-09-23 11:10:02,"Water level is rising rapidly near Bellandur and the main road is completely submerged. Families are trapped on their rooftops.",12.9304,77.6784,SMS/SOS Alert,Flood,Critical,8,Rescue
+R009,2026-09-23 11:44:26,"A short circuit has caused a fire in the electrical panel of a shop in Marathahalli. Smoke is spreading fast.",12.9591,77.6974,Fire Helpline,Fire,High,0,Fire Services
+R010,2026-09-23 12:18:40,"Heavy rain has triggered a landslide near Madikeri and mud has entered two houses. A family is stuck inside.",12.4244,75.7382,Municipal Helpline,Landslide,Critical,3,Rescue
+R011,2026-09-23 12:55:07,"The earthquake has damaged several houses in Ballari. Two people are trapped under a collapsed wall.",15.1394,76.9214,Citizen Report,Earthquake,Critical,2,Rescue
+R012,2026-09-23 13:30:52,"Cyclone warning is in place near Udupi and the fishing boats have not returned to the shore.",13.3409,74.7421,Emergency App,Cyclone,Critical,6,Rescue
+R013,2026-09-23 14:08:14,"The balcony of our apartment in Rajajinagar has fallen down and one person is injured below.",12.9916,77.5525,Citizen Report,Building Collapse,High,1,Medical
+R014,2026-09-23 14:47:38,"Two bikes hit each other near Electronic City and one rider is lying on the road and not moving.",12.8452,77.6602,Emergency App,Road Accident,High,1,Medical
+R015,2026-09-23 15:20:11,"Minor waterlogging reported near Jayanagar bus stand. Vehicles are moving slowly but there is no immediate danger.",12.9250,77.5938,Municipal Helpline,Flood,Low,0,None
+R016,2026-09-23 16:02:45,"Kitchen fire reported in a house in Basavanagudi. The family has come out safely but the fire is spreading to the next room.",12.9422,77.5738,Fire Helpline,Fire,Medium,0,Fire Services
+R017,2026-09-23 16:39:22,"The road near Chikkamagaluru is sinking slowly after the rain and cracks have appeared on the surface.",13.3161,75.7720,Volunteer Report,Landslide,Low,0,Road Clearance
+R018,2026-09-23 17:14:09,"After the earthquake, cracks have appeared in the walls of our building in Hubballi and it looks unsafe to enter.",15.3647,75.1240,Citizen Report,Earthquake,Medium,0,Evacuation
+R019,2026-09-23 17:58:36,"Heavy wind and rain have damaged the roofs of several houses in Gokarna. Families need shelter for the night.",14.5479,74.3188,Volunteer Report,Cyclone,High,12,Shelter
+R020,2026-09-23 18:31:50,"A portion of the wall of an under construction building in HSR Layout has fallen. Workers are running out.",12.9116,77.6474,News Desk,Building Collapse,High,2,Rescue
+R021,2026-09-23 19:12:27,"A car has overturned near NICE Road and the passengers are stuck inside.",12.8900,77.5400,Police Control Room,Road Accident,Critical,3,Rescue
+R022,2026-09-23 19:55:03,"Storm water drain has overflowed in Koramangala and water has entered the ground floor of our apartment. We need help to move out.",12.9352,77.6245,Citizen Report,Flood,Medium,2,Rescue
+R023,2026-09-23 20:28:41,"There is a fire in a garbage dump in Bommanahalli and the smoke is making it hard to breathe for nearby residents.",12.8996,77.6189,Municipal Helpline,Fire,Low,0,Fire Services
+R024,2026-09-23 21:06:18,"Boulders have fallen on the highway near Shiradi Ghat after the rain and one car has been hit.",12.9400,75.6500,Police Control Room,Landslide,Critical,2,Rescue
+R025,2026-09-23 21:42:55,"The building has tilted after the tremors in Belagavi. Around twenty families are standing outside and need shelter for the night.",15.8497,74.4977,News Desk,Earthquake,High,20,Shelter
+R026,2026-09-23 22:19:30,"The cyclone has cut off the power supply in Mangaluru and trees are blocking the roads.",12.9141,74.8560,Municipal Helpline,Cyclone,Medium,0,Road Clearance
+R027,2026-09-23 22:54:12,"The roof of an old house in Basavanagudi has fallen in. The family was outside at that time.",12.9422,77.5738,Citizen Report,Building Collapse,Medium,0,Shelter
+R028,2026-09-23 23:27:44,"Minor accident near Banashankari between an auto and a car. No one is hurt and the vehicles have been moved aside.",12.9255,77.5468,Emergency App,Road Accident,Low,0,None
+R029,2026-09-24 05:41:09,"Continuous rain since last night has flooded the low lying houses in Kengeri. Around ten families are waiting for evacuation.",12.9177,77.4838,SMS/SOS Alert,Flood,High,12,Evacuation
+R030,2026-09-24 06:13:52,"A blaze has broken out in a flat in Yelahanka and the family living there has not been able to come out.",13.1007,77.5963,Fire Helpline,Fire,Critical,5,Rescue
+R031,2026-09-24 06:49:27,"Mudslide near Gokarna has buried a small shed. We are not sure if anyone was inside it.",14.5479,74.3188,Volunteer Report,Landslide,High,1,Rescue
+R032,2026-09-24 07:22:41,"Two people were injured by falling debris during the earthquake in Kalaburagi. They need medical attention.",17.3297,76.8343,Citizen Report,Earthquake,High,2,Medical
+R033,2026-09-24 08:01:16,"The coastal village near Malpe is being evacuated because of the cyclone. Around forty people need to be moved.",13.3495,74.7050,Police Control Room,Cyclone,Critical,40,Evacuation
+R034,2026-09-24 08:37:58,"An under construction building in Yelahanka has tilted and the workers are refusing to go inside.",13.1007,77.5963,News Desk,Building Collapse,Medium,0,Evacuation
+R035,2026-09-24 09:11:23,"A truck has turned over on the highway near Devanahalli and it is blocking both lanes with spilled diesel.",13.2437,77.7120,Police Control Room,Road Accident,High,1,Road Clearance
+R036,2026-09-24 09:46:04,"Roads near KR Puram are flooded up to knee level. An autorickshaw is stuck and the driver is asking for help.",13.0075,77.6960,Citizen Report,Flood,Medium,1,Rescue
+R037,2026-09-24 10:23:37,"A fire broke out in a factory in Bommanahalli. Workers are running out and two people are injured with burns.",12.8996,77.6189,Fire Helpline,Fire,High,2,Medical
+R038,2026-09-24 11:02:50,"Landslide debris is blocking the ghat road near Charmadi and around fifteen vehicles are stuck on both sides.",13.0200,75.4800,Police Control Room,Landslide,High,0,Road Clearance
+R039,2026-09-24 11:38:15,"The old building next to us in Davanagere has partially collapsed after the earthquake. We can hear people shouting inside.",14.4644,75.9218,SMS/SOS Alert,Earthquake,Critical,5,Rescue
+R040,2026-09-24 12:14:29,"Because of the cyclone, no food or drinking water has reached the relief camp near Kundapura for two days.",13.6260,74.6940,Volunteer Report,Cyclone,High,0,Food/Water
+R041,2026-09-24 12:51:43,"The slab of a commercial building in Koramangala has collapsed during work and around six workers are trapped.",12.9352,77.6245,News Desk,Building Collapse,Critical,6,Rescue
+R042,2026-09-24 13:26:08,"A pedestrian was hit by a speeding vehicle near Marathahalli and needs urgent medical help.",12.9591,77.6974,Citizen Report,Road Accident,Critical,0,Medical
+R043,2026-09-24 14:03:22,"Malleshwaram lake has overflowed after heavy rain. Water is entering nearby houses and people are panicking.",13.0055,77.5643,Municipal Helpline,Flood,Critical,9,Evacuation
+R044,2026-09-24 14:39:47,"Dry grass fire near the highway in Tumakuru has spread towards the parked vehicles.",13.3379,77.1173,Fire Helpline,Fire,Medium,0,Fire Services
+R045,2026-09-24 15:15:11,"A tree has fallen across the road in Ramanagara after the rain and traffic is blocked completely.",12.7210,77.2800,Municipal Helpline,Landslide,Low,0,Road Clearance
+R046,2026-09-24 15:52:36,"Minor tremors felt in Bengaluru. Nothing has fallen and everything looks normal.",12.9716,77.5946,Citizen Report,Earthquake,Low,0,None
+R047,2026-09-24 16:28:50,"The storm has blown away the asbestos roof of our house in Bhatkal. An elderly woman is injured.",13.9850,74.5550,SMS/SOS Alert,Cyclone,Medium,1,Medical
+R048,2026-09-24 17:05:14,"Cracks have appeared in the pillars of the apartment in Malleshwaram and residents are being asked to come out.",13.0055,77.5643,Citizen Report,Building Collapse,Medium,0,Evacuation
+R049,2026-09-24 17:41:39,"An oil tanker and a truck collision near Nelamangala has caused a fire and the flames are spreading on the highway.",13.0990,77.3930,News Desk,Road Accident,Critical,2,Fire Services
+R050,2026-09-24 18:17:03,"Flood water has entered the school building in Rajajinagar. Children have been moved to the first floor and are safe for now.",12.9916,77.5525,Municipal Helpline,Flood,Medium,0,Evacuation
+R051,2026-09-24 18:53:28,"Fire in a transformer near Hennur has caused sparks and the whole street has lost power.",13.0350,77.6430,Fire Helpline,Fire,Medium,0,Fire Services
+R052,2026-09-24 19:29:42,"The hillside behind the houses in Sakleshpur has started sliding after continuous rain. Families are afraid to stay there.",12.9430,75.7850,Volunteer Report,Landslide,Medium,0,Evacuation
+R053,2026-09-24 20:06:07,"The earthquake has broken the water pipeline in Mysuru and there is no drinking water supply since morning.",12.2958,76.6394,Municipal Helpline,Earthquake,Medium,0,Food/Water
+R054,2026-09-24 20:42:31,"Strong winds are continuing in Karwar and the electric wires have fallen on the road.",14.8135,74.1297,Police Control Room,Cyclone,High,0,Road Clearance
+R055,2026-09-24 21:18:56,"Building collapse in Yeshwanthpur after water seeped into the foundation. Two families are missing.",13.0234,77.5540,SMS/SOS Alert,Building Collapse,Critical,3,Rescue
+R056,2026-09-24 21:55:20,"A school van met with an accident near Yelahanka and around nine children have minor injuries.",13.1007,77.5963,Police Control Room,Road Accident,High,0,Medical
+R057,2026-09-24 22:31:45,"Drainage water mixed with sewage has flooded the HSR Layout main road. The area is unsafe for walking.",12.9116,77.6474,Citizen Report,Flood,Low,0,Road Clearance
+R058,2026-09-24 23:08:09,"Burning smell and heavy smoke reported from a closed warehouse in Hubballi. No flames are visible yet.",15.3647,75.1240,News Desk,Fire,Low,0,Fire Services
+R059,2026-09-24 23:44:34,"Landslide near Kolar has damaged the retaining wall of the temple. Visitors are stranded on the other side.",13.1357,78.1326,Police Control Room,Landslide,High,4,Rescue
+R060,2026-09-25 05:20:58,"Debris from the damaged buildings in Hassan is blocking the main road after the earthquake.",13.0072,76.0962,Municipal Helpline,Earthquake,High,0,Road Clearance
+R061,2026-09-25 05:57:23,"Cyclone rain has flooded the coastal road near Maravanthe and the water is still rising.",13.6500,74.6800,Volunteer Report,Cyclone,High,3,Evacuation
+R062,2026-09-25 06:33:47,"A single storey house in KR Puram collapsed and the elderly couple living inside is calling for help.",13.0075,77.6960,SMS/SOS Alert,Building Collapse,Critical,2,Rescue
+R063,2026-09-25 07:10:12,"A lorry has fallen into the ditch on the roadside near Hosakote and the driver is trapped in the cabin.",13.0700,77.7980,Police Control Room,Road Accident,High,1,Rescue
+R064,2026-09-25 07:46:36,"Water from the overflowing canal has entered Hebbal. Two people are missing and local residents are searching for them.",13.0358,77.5970,SMS/SOS Alert,Flood,High,2,Rescue
+R065,2026-09-25 08:23:01,"A fire in the slum area of Hosur Road has destroyed several huts and families have lost everything. They need shelter and blankets.",12.8900,77.6300,Fire Helpline,Fire,High,0,Shelter
+R066,2026-09-25 08:59:25,"After the landslide at Agumbe, the hill road is completely cut off and villagers need food and drinking water.",13.5000,75.0900,Volunteer Report,Landslide,High,0,Food/Water
+R067,2026-09-25 09:35:50,"Several families in Bagalkot are sleeping in the open ground after the earthquake because their houses are damaged.",16.1817,75.6961,News Desk,Earthquake,High,15,Shelter
+R068,2026-09-25 10:12:14,"The boats near Malpe were damaged in the cyclone and some fishermen are missing from the harbour.",13.3495,74.7050,Police Control Room,Cyclone,Critical,4,Rescue
+R069,2026-09-25 10:48:39,"Debris from the collapsed building in Bommanahalli has blocked the lane and the ambulance cannot enter.",12.8996,77.6189,Municipal Helpline,Building Collapse,High,0,Road Clearance
+R070,2026-09-25 11:25:03,"A container vehicle has broken down in the middle of the road near Attibele and is causing a big traffic jam.",12.7800,77.7700,Emergency App,Road Accident,Low,0,Road Clearance
+R071,2026-09-25 12:01:28,"The basement of our building in Yeshwanthpur is fully flooded. Nobody is trapped but the water needs to be pumped out.",13.0234,77.5540,Emergency App,Flood,Medium,0,Rescue
+R072,2026-09-25 12:37:52,"The car caught fire after the accident near Nelamangala. The driver is injured and cannot move out on his own.",13.0990,77.3930,Police Control Room,Fire,Critical,1,Medical
+R073,2026-09-25 13:14:17,"Mud and water came down the slope into the village near Chamarajanagar and washed away two shops.",11.9261,76.9400,SMS/SOS Alert,Landslide,Critical,4,Rescue
+R074,2026-09-25 13:50:41,"The school building in Chitradurga has developed large cracks after the tremor and the children are scared.",14.2251,76.3980,Municipal Helpline,Earthquake,Medium,0,Evacuation
+R075,2026-09-25 14:27:06,"Wind has damaged the temporary shelter in Honnavar and people are sitting in the open without cover.",14.2830,74.4450,Volunteer Report,Cyclone,High,0,Shelter
+R076,2026-09-25 15:03:30,"Part of the compound wall fell on a passerby near Jayanagar and he is bleeding heavily.",12.9250,77.5938,Citizen Report,Building Collapse,Medium,1,Medical
+R077,2026-09-25 15:39:55,"An accident near Bommanahalli has left broken glass and metal pieces all over the road. Traffic needs to be cleared.",12.8996,77.6189,Police Control Room,Road Accident,Medium,0,Road Clearance
+R078,2026-09-25 16:16:19,"Rain water has flooded the underpass near Vijayanagar and a car is stuck inside with the family still in it.",12.9719,77.5300,SMS/SOS Alert,Flood,Critical,3,Rescue
+R079,2026-09-25 16:52:44,"Fire in the chemical storage room of a laboratory in Yelahanka. Strong fumes and at least one person has collapsed.",13.1007,77.5963,Fire Helpline,Fire,Critical,2,Fire Services
+R080,2026-09-25 17:29:08,"Small stones are falling from the hill above the bus stop in Madikeri. It is risky to wait there.",12.4244,75.7382,Volunteer Report,Landslide,Medium,0,Road Clearance
+R081,2026-09-25 18:05:33,"A person is stuck in the lift of a building in Mangaluru after the earthquake and the doors will not open.",12.9141,74.8560,Emergency App,Earthquake,High,1,Rescue
+R082,2026-09-25 18:41:57,"A huge tree fell on the road near Kumta because of the cyclone wind and traffic is fully blocked.",14.4230,74.4120,Municipal Helpline,Cyclone,Medium,0,Road Clearance
+R083,2026-09-25 19:18:22,"The false ceiling of the mall in Whitefield has come down. Nobody is hurt but the public is panicking.",12.9698,77.7500,News Desk,Building Collapse,Low,0,None
+R084,2026-09-25 19:54:46,"A car fell off the flyover near Hebbal and three people inside are seriously injured.",13.0358,77.5970,Police Control Room,Road Accident,Critical,3,Medical
+R085,2026-09-25 20:02:11,"Riverside houses in Karwar are under water after the river crossed the danger mark. People need food and drinking water.",14.8135,74.1297,Volunteer Report,Flood,High,15,Food/Water
+R086,2026-09-25 20:09:35,"Small fire in the temple kitchen in Basavanagudi. The crowd is being moved away by the volunteers.",12.9422,77.5738,Fire Helpline,Fire,Medium,0,Fire Services
+R087,2026-09-25 20:17:00,"The landslide near Mudigere has brought down an electricity pole and the live wires are lying on the road.",13.1330,75.6400,Municipal Helpline,Landslide,High,0,Road Clearance
+R088,2026-09-25 20:24:24,"Our apartment in Udupi is shaking again with tremors and the walls are cracking on every floor.",13.3409,74.7421,Citizen Report,Earthquake,Critical,25,Evacuation
+R089,2026-09-25 20:31:49,"The cyclone has flooded the low lying colony in Udupi and the drinking water is contaminated. People need clean water.",13.3409,74.7421,Municipal Helpline,Cyclone,High,0,Food/Water
+R090,2026-09-25 20:39:13,"A building collapsed in Indiranagar and there is a lot of dust and noise. People are digging with their hands.",12.9719,77.6412,News Desk,Building Collapse,Critical,6,Rescue
+R091,2026-09-25 20:46:38,"A multiple vehicle pile up happened near Chikkaballapur in the fog and we can hear people crying for help.",13.4355,77.7315,Police Control Room,Road Accident,Critical,5,Rescue
+R092,2026-09-25 20:54:02,"Water has entered the Mangaluru market area. Shop owners are shifting their goods and asking for help.",12.9141,74.8560,Municipal Helpline,Flood,Low,0,Road Clearance
+R093,2026-09-25 21:01:27,"Smoke is filling the corridor of the hostel in Rajajinagar. We cannot find the exit and need help immediately.",12.9916,77.5525,SMS/SOS Alert,Fire,Critical,8,Rescue
+R094,2026-09-25 21:08:51,"A portion of the hill collapsed near Gokarna and one trekker is injured and cannot walk.",14.5479,74.3188,Volunteer Report,Landslide,Medium,1,Medical
+R095,2026-09-25 21:16:16,"The earthquake has caused a small fire in the market area of Vijayapura from a broken gas line.",16.8302,75.7100,News Desk,Earthquake,Critical,0,Fire Services
+R096,2026-09-25 21:23:40,"Some fishermen are stranded on a small island near Malpe after the cyclone and they need rescue.",13.3495,74.7050,Police Control Room,Cyclone,Critical,6,Rescue
+R097,2026-09-25 21:31:05,"Half of the building in Hebbal has fallen into the drain area and around four people are stuck inside.",13.0358,77.5970,SMS/SOS Alert,Building Collapse,Critical,4,Rescue
+R098,2026-09-25 21:38:29,"A bus has skidded off the road near Sakleshpur and is stuck in the mud with passengers still inside.",12.9430,75.7850,Emergency App,Road Accident,High,25,Rescue
+R099,2026-09-25 21:45:54,"Sewage water is overflowing in Shivamogga after the rain and several children are falling sick. We need medical help.",13.9299,75.5681,Municipal Helpline,Flood,Medium,0,Medical
+R100,2026-09-25 21:53:18,"There is a fire in the tyre shop near Tumakuru and the smoke can be seen from far away.",13.3379,77.1173,Fire Helpline,Fire,High,0,Fire Services

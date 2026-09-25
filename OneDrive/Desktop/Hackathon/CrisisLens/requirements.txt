@@ -1,0 +1,10 @@
+# CrisisLens - Python dependencies
+#
+# Only these four libraries are needed. Everything runs offline.
+# Versions are intentionally left unpinned for this hackathon prototype so
+# that pip can pick a build that matches your Python version (including 3.13).
+
+pandas
+numpy
+scikit-learn
+joblib
