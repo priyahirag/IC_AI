@@ -1,0 +1,7 @@
+id,type,name,latitude,longitude,capacity
+I001,hospital,City Hospital,12.8465,77.6610,200
+I002,school,ABC School,12.8470,77.6595,500
+I003,school,XYZ School,12.8440,77.6630,300
+I004,police,Police Station,12.8500,77.6580,50
+I005,road,Main Road,12.8450,77.6600,0
+I006,hospital,Metro Hospital,12.9000,77.6210,150
