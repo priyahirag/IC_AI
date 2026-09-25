@@ -198,6 +198,349 @@ div[data-testid="stButton"] button:hover{border-color:rgba(34,211,238,.55)}
   .command-row{flex-direction:column;align-items:flex-start}
   .signal-grid{grid-template-columns:1fr}
 }
+
+/* V6 PROFESSIONAL KPI + CV OVERRIDES */
+
+.kpi-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+  margin:8px 0 24px;
+}
+.kpi-card{
+  position:relative;
+  min-height:132px;
+  padding:17px 18px 15px;
+  border-radius:16px;
+  background:linear-gradient(145deg,#101f32,#091421);
+  border:1px solid rgba(148,163,184,.18);
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+  overflow:hidden;
+}
+.kpi-card:after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;height:3px;
+}
+.kpi-active:after{background:#22d3ee}
+.kpi-critical:after{background:#ef4444}
+.kpi-high:after{background:#f59e0b}
+.kpi-medium:after{background:#facc15}
+.kpi-low:after{background:#22c55e}
+.kpi-top{
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+.kpi-dot{
+  width:9px;height:9px;border-radius:50%;display:inline-block;
+  box-shadow:0 0 10px currentColor;
+}
+.kpi-active .kpi-dot{background:#22d3ee;color:#22d3ee}
+.kpi-critical .kpi-dot{background:#ef4444;color:#ef4444}
+.kpi-high .kpi-dot{background:#f59e0b;color:#f59e0b}
+.kpi-medium .kpi-dot{background:#facc15;color:#facc15}
+.kpi-low .kpi-dot{background:#22c55e;color:#22c55e}
+.kpi-label{
+  color:#f8fafc !important;
+  font-size:12px !important;
+  font-weight:900 !important;
+  letter-spacing:1.5px !important;
+}
+.kpi-number{
+  color:#ffffff !important;
+  font-size:43px !important;
+  line-height:1 !important;
+  font-weight:900 !important;
+  margin-top:14px;
+}
+.kpi-caption{
+  color:#aebdcd !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+  letter-spacing:.4px;
+  margin-top:8px;
+}
+
+.cv-command-card{
+  border:1px solid rgba(148,163,184,.18);
+  border-radius:20px;
+  background:linear-gradient(145deg,#0e1c2e,#081321);
+  padding:22px;
+  box-shadow:0 18px 42px rgba(0,0,0,.22);
+}
+.cv-command-header{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:18px;
+  padding-bottom:18px;
+  border-bottom:1px solid rgba(148,163,184,.12);
+}
+.cv-eyebrow{
+  color:#67e8f9 !important;
+  font-size:10px !important;
+  font-weight:900 !important;
+  letter-spacing:2.2px !important;
+  text-transform:uppercase;
+}
+.cv-main-title{
+  color:#ffffff !important;
+  font-size:25px !important;
+  line-height:1.15 !important;
+  font-weight:900 !important;
+  margin-top:5px;
+}
+.cv-main-sub{
+  color:#aebdcd !important;
+  font-size:13px !important;
+  margin-top:6px;
+  line-height:1.5;
+}
+.cv-status{
+  flex:0 0 auto;
+  padding:9px 12px;
+  border-radius:999px;
+  color:#fde68a !important;
+  background:rgba(250,204,21,.08);
+  border:1px solid rgba(250,204,21,.22);
+  font-size:10px !important;
+  font-weight:900 !important;
+  letter-spacing:1px;
+  white-space:nowrap;
+}
+.cv-status strong{color:#fff7a8 !important;margin-left:5px}
+
+.cv-metrics{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin:17px 0;
+}
+.cv-metric{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  min-height:70px;
+  padding:11px 13px;
+  border-radius:13px;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(148,163,184,.11);
+}
+.cv-metric-icon{
+  width:38px;height:38px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:10px;
+  background:rgba(34,211,238,.08);
+  font-size:18px;
+}
+.cv-metric-label{
+  color:#9fb0c3 !important;
+  font-size:9px !important;
+  font-weight:900 !important;
+  letter-spacing:1.2px;
+}
+.cv-metric-value{
+  color:#ffffff !important;
+  font-size:21px !important;
+  font-weight:900 !important;
+  margin-top:2px;
+}
+
+.cv-info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1.25fr;
+  gap:10px;
+}
+.cv-info-panel{
+  padding:14px 15px;
+  border-radius:13px;
+  background:rgba(255,255,255,.025);
+  border:1px solid rgba(148,163,184,.10);
+  min-height:116px;
+}
+.cv-info-label{
+  color:#67e8f9 !important;
+  font-size:9px !important;
+  font-weight:900 !important;
+  letter-spacing:1.5px;
+}
+.cv-info-title{
+  color:#ffffff !important;
+  font-size:14px !important;
+  font-weight:800 !important;
+  margin-top:7px;
+}
+.cv-info-text{
+  color:#cbd5e1 !important;
+  font-size:12px !important;
+  line-height:1.55;
+  margin-top:6px;
+}
+.cv-info-text strong{color:#ffffff !important}
+
+@media (max-width: 1050px){
+  .kpi-grid{grid-template-columns:repeat(3,1fr)}
+  .cv-metrics{grid-template-columns:repeat(2,1fr)}
+  .cv-info-grid{grid-template-columns:1fr}
+}
+@media (max-width: 650px){
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .cv-command-header{flex-direction:column}
+  .cv-metrics{grid-template-columns:1fr 1fr}
+}
+
+
+
+/* V8 CLEAN COMMAND-CENTER UI */
+
+.native-kpi{
+  min-height:118px;
+  box-sizing:border-box;
+  padding:16px 16px 14px;
+  border:1px solid rgba(148,163,184,.18);
+  border-radius:14px;
+  background:linear-gradient(145deg,#102036,#0a1524);
+  border-bottom:3px solid var(--accent);
+  box-shadow:0 10px 26px rgba(0,0,0,.18);
+}
+.native-kpi-label{
+  color:#f8fafc !important;
+  font-size:11px !important;
+  font-weight:900 !important;
+  letter-spacing:1.4px !important;
+  white-space:nowrap;
+}
+.native-kpi-dot{
+  display:inline-block;
+  width:8px;height:8px;
+  margin-right:7px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 9px var(--accent);
+}
+.native-kpi-value{
+  color:#ffffff !important;
+  font-size:38px !important;
+  font-weight:900 !important;
+  line-height:1 !important;
+  margin-top:15px;
+}
+.native-kpi-caption{
+  color:#aebdcd !important;
+  font-size:9px !important;
+  font-weight:700 !important;
+  letter-spacing:.8px;
+  margin-top:7px;
+}
+.section-gap{height:10px}
+
+[data-testid="stVerticalBlockBorderWrapper"]{
+  border-color:rgba(148,163,184,.18) !important;
+  background:linear-gradient(145deg,#0d1b2d,#081321) !important;
+  border-radius:18px !important;
+}
+
+.cv-overline{
+  color:#67e8f9 !important;
+  font-size:10px !important;
+  font-weight:900 !important;
+  letter-spacing:2px !important;
+}
+.cv-title{
+  color:#ffffff !important;
+  font-size:24px !important;
+  font-weight:900 !important;
+  margin-top:5px;
+}
+.cv-description{
+  color:#aebdcd !important;
+  font-size:12px !important;
+  margin-top:5px;
+}
+.cv-description strong{color:#ffffff !important}
+.cv-severity-badge{
+  text-align:center;
+  padding:9px 8px;
+  border:1px solid rgba(250,204,21,.25);
+  background:rgba(250,204,21,.07);
+  border-radius:10px;
+  color:#facc15 !important;
+  font-size:9px !important;
+  font-weight:900 !important;
+  letter-spacing:1px;
+}
+.cv-severity-badge strong{
+  color:#ffffff !important;
+  font-size:12px !important;
+}
+.cv-divider{
+  height:1px;
+  background:rgba(148,163,184,.13);
+  margin:15px 0;
+}
+.cv-stat{
+  min-height:84px;
+  padding:12px;
+  border-radius:12px;
+  background:#0a1727;
+  border:1px solid rgba(148,163,184,.12);
+}
+.cv-stat-icon{
+  font-size:17px;
+  line-height:1;
+  margin-bottom:8px;
+}
+.cv-stat-label{
+  color:#9fb0c3 !important;
+  font-size:9px !important;
+  font-weight:900 !important;
+  letter-spacing:1.2px !important;
+}
+.cv-stat-value{
+  color:#ffffff !important;
+  font-size:20px !important;
+  font-weight:900 !important;
+  margin-top:3px;
+}
+.cv-info{
+  min-height:115px;
+  padding:14px;
+  border-radius:12px;
+  background:#0a1727;
+  border:1px solid rgba(148,163,184,.12);
+}
+.cv-info-label{
+  color:#67e8f9 !important;
+  font-size:9px !important;
+  font-weight:900 !important;
+  letter-spacing:1.5px !important;
+}
+.cv-info-title{
+  color:#ffffff !important;
+  font-size:14px !important;
+  font-weight:800 !important;
+  margin-top:7px;
+}
+.cv-info-body{
+  color:#cbd5e1 !important;
+  font-size:11px !important;
+  line-height:1.55 !important;
+  margin-top:6px;
+}
+.cv-info-body strong{color:#ffffff !important}
+
+[data-baseweb="select"] > div{
+  background:#0d1929 !important;
+  color:#ffffff !important;
+  border-color:rgba(148,163,184,.25) !important;
+}
+[data-baseweb="select"] *{color:#ffffff !important}
+.stButton button{
+  color:#ffffff !important;
+  background:#102238 !important;
+  border:1px solid rgba(34,211,238,.30) !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -1087,55 +1430,37 @@ low = len(
 
 
 
-col1, col2, col3, col4 = st.columns(4)
-
-
-
-
-
-col1.metric(
-
-    "🚨 Active Incidents",
-
-    len(data)
-
-)
-
-
-
-col2.metric(
-
-    "🔴 Critical",
-
-    critical
-
-)
-
-
-
-col3.metric(
-
-    "🟠 High",
-
-    high
-
-)
-
-
-
-col4.metric(
-
-    "🟡 Medium",
-
-    medium
-
-)
-
-
-
-
 
 # ==========================================
+# COMMAND CENTER KPI STRIP
+# ==========================================
+
+kpi_data = [
+    ("ACTIVE", len(data), "LIVE INCIDENTS", "#22d3ee"),
+    ("CRITICAL", critical, "IMMEDIATE ATTENTION", "#ef4444"),
+    ("HIGH", high, "PRIORITY RESPONSE", "#f59e0b"),
+    ("MEDIUM", medium, "MONITOR CLOSELY", "#facc15"),
+    ("LOW", low, "ROUTINE MONITORING", "#22c55e"),
+]
+
+kpi_cols = st.columns(5, gap="small")
+
+for col, (label, value, caption, accent) in zip(kpi_cols, kpi_data):
+    with col:
+        st.markdown(
+            f"""
+            <div class="native-kpi" style="--accent:{accent};">
+                <div class="native-kpi-label">
+                    <span class="native-kpi-dot"></span>{label}
+                </div>
+                <div class="native-kpi-value">{value}</div>
+                <div class="native-kpi-caption">{caption}</div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+st.markdown("<div class='section-gap'></div>", unsafe_allow_html=True)
 
 # ==========================================
 # COMMAND CENTER: MAP + INCIDENT COMMAND
@@ -1222,7 +1547,7 @@ with map_col:
     st.markdown('<div class="map-card">', unsafe_allow_html=True)
     map_event = st.pydeck_chart(
         deck,
-        use_container_width=True,
+        width="stretch",
         on_select="rerun",
         selection_mode="single-object"
     )
@@ -1284,45 +1609,108 @@ with command_col:
     """, unsafe_allow_html=True)
 
 # ==========================================
+
+# ==========================================
 # COMPUTER VISION EVIDENCE
 # ==========================================
 
-st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
 st.markdown(
     '<div class="section-label">COMPUTER VISION</div>'
     '<div class="section-title">Computer Vision Evidence Intelligence</div>'
-    '<div class="section-subtitle">YOLO-based visual detections supporting incident priority</div>',
-    unsafe_allow_html=True
+    '<div class="section-subtitle">YOLO detections used as supporting evidence for incident urgency and priority</div>',
+    unsafe_allow_html=True,
 )
 
-cv_left, cv_right = st.columns([1.15, 1], gap="medium")
+with st.container(border=True):
+    cv_header_left, cv_header_right = st.columns([4, 1], gap="medium")
 
-with cv_left:
-    st.markdown('<div class="cv-card">', unsafe_allow_html=True)
-    st.markdown(f"""
-    <span class="cv-chip">👤 PERSONS · {person_count}</span>
-    <span class="cv-chip">🚗 VEHICLES · {car_count}</span>
-    <span class="cv-chip">🚤 BOATS · {boat_count}</span>
-    <span class="cv-chip">🧠 CV · {cv_severity}</span>
-    <div class="evidence">
-      <div class="evidence-label">MODEL SIGNAL</div>
-      <div class="evidence-text">Computer vision contributed <strong>+{selected_incident['cv_adjustment']}</strong> to final urgency.</div>
-    </div>
-    <div class="evidence">
-      <div class="evidence-label">YOLO ASSET</div>
-      <div class="evidence-text">{yolo_image_name}</div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+    with cv_header_left:
+        st.markdown(
+            '<div class="cv-overline">VISION ANALYTICS</div>'
+            '<div class="cv-title">Incident Evidence Profile</div>'
+            f'<div class="cv-description">Computer-vision observations linked to <strong>{selected_incident_id}</strong></div>',
+            unsafe_allow_html=True,
+        )
 
-with cv_right:
-    st.markdown('<div class="cv-card">', unsafe_allow_html=True)
-    st.markdown('<div class="section-label">ANALYTIC CONTEXT</div>', unsafe_allow_html=True)
-    st.markdown(
-        f'<div class="evidence-text">Visual detections provide supporting evidence for the incident priority assessment. Current CV severity is <strong>{cv_severity}</strong>.</div>',
-        unsafe_allow_html=True
-    )
-    st.markdown('</div>', unsafe_allow_html=True)
+    with cv_header_right:
+        st.markdown(
+            f'<div class="cv-severity-badge">CV SEVERITY<br><strong>{cv_severity}</strong></div>',
+            unsafe_allow_html=True,
+        )
+
+    st.markdown("<div class='cv-divider'></div>", unsafe_allow_html=True)
+
+    m1, m2, m3, m4 = st.columns(4, gap="small")
+
+    cv_items = [
+        (m1, "PERSONS", person_count, "👤"),
+        (m2, "VEHICLES", car_count, "🚗"),
+        (m3, "BOATS", boat_count, "🚤"),
+        (m4, "CV SEVERITY", cv_severity, "🧠"),
+    ]
+
+    for col, label, value, icon in cv_items:
+        with col:
+            st.markdown(
+                f"""
+                <div class="cv-stat">
+                    <div class="cv-stat-icon">{icon}</div>
+                    <div class="cv-stat-label">{label}</div>
+                    <div class="cv-stat-value">{value}</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+    st.markdown("<div class='cv-divider'></div>", unsafe_allow_html=True)
+
+    info1, info2, info3 = st.columns(3, gap="small")
+
+    with info1:
+        st.markdown(
+            f"""
+            <div class="cv-info">
+                <div class="cv-info-label">MODEL SIGNAL</div>
+                <div class="cv-info-title">Urgency contribution</div>
+                <div class="cv-info-body">
+                    Computer vision contributed
+                    <strong>+{selected_incident['cv_adjustment']}</strong>
+                    points to final urgency.
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    with info2:
+        st.markdown(
+            f"""
+            <div class="cv-info">
+                <div class="cv-info-label">YOLO ASSET</div>
+                <div class="cv-info-title">Annotated evidence</div>
+                <div class="cv-info-body">
+                    <strong>{yolo_image_name}</strong><br>
+                    Bounding boxes identify detected objects.
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    with info3:
+        st.markdown(
+            f"""
+            <div class="cv-info">
+                <div class="cv-info-label">ANALYTIC CONTEXT</div>
+                <div class="cv-info-title">How evidence is used</div>
+                <div class="cv-info-body">
+                    Visual detections support the incident priority assessment.
+                    Current CV severity: <strong>{cv_severity}</strong>.
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 # YOLO DETECTION IMAGE
 
@@ -1433,7 +1821,7 @@ if selected_yolo_image:
 
 
 
-            use_container_width=True
+            width="stretch"
 
 
 
