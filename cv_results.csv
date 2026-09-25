@@ -1,0 +1,4 @@
+incident_id,person_count,car_count,boat_count,cv_severity
+INC001,0,8,0,MEDIUM
+INC002,1,2,0,LOW
+INC003,0,0,4,LOW

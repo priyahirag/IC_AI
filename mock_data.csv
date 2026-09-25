@@ -1,0 +1,6 @@
+incident_id,disaster_type,location,latitude,longitude,severity,exposure,vulnerability,urgency,evidence
+INC001,Flood,Electronic City,12.845,77.660,90,85,80,95,12 citizen reports
+INC002,Fire,Peenya,13.028,77.520,75,60,55,85,8 citizen reports
+INC003,Landslide,Kengeri,12.914,77.485,80,70,75,70,5 citizen reports
+INC004,Flood,Whitefield,12.969,77.750,65,50,45,60,7 citizen reports
+INC005,Fire,Bommanahalli,12.898,77.617,55,40,50,65,4 citizen reports

@@ -1,0 +1,2 @@
+incident_id,disaster_type,severity,evidence,location,latitude,longitude,population_exposed,exposure,vulnerability
+INC001,Flood,90,"Heavy flooding reported, people affected",Electronic City,12.8458,77.6601,6200,62.0,69.52
