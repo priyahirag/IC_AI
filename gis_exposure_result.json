@@ -1,0 +1,64 @@
+{
+    "incident_id": "INC001",
+    "incident_latitude": 12.8458,
+    "incident_longitude": 77.6601,
+    "affected_radius_km": 2,
+    "population_exposed": 6200,
+    "hospitals": 1,
+    "schools": 2,
+    "police_stations": 1,
+    "roads": 1,
+    "vulnerability_score": 69.52,
+    "infrastructure": [
+        {
+            "id": "I001",
+            "type": "hospital",
+            "name": "City Hospital",
+            "distance_km": 0.1
+        },
+        {
+            "id": "I002",
+            "type": "school",
+            "name": "ABC School",
+            "distance_km": 0.07
+        },
+        {
+            "id": "I003",
+            "type": "school",
+            "name": "XYZ School",
+            "distance_km": 0.31
+        },
+        {
+            "id": "I004",
+            "type": "police",
+            "name": "Police Station",
+            "distance_km": 0.23
+        },
+        {
+            "id": "I005",
+            "type": "road",
+            "name": "Main Road",
+            "distance_km": 0.01
+        }
+    ],
+    "population_zones": [
+        {
+            "zone_id": "Z001",
+            "population": 3500,
+            "vulnerability": 82,
+            "distance_km": 0.01
+        },
+        {
+            "zone_id": "Z002",
+            "population": 1800,
+            "vulnerability": 60,
+            "distance_km": 0.53
+        },
+        {
+            "zone_id": "Z003",
+            "population": 900,
+            "vulnerability": 40,
+            "distance_km": 0.55
+        }
+    ]
+}
