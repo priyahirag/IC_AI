@@ -29,57 +29,171 @@ from priority import calculate_priority, get_priority_level
 
 
 st.set_page_config(
-
-    page_title="CrisisLens",
-
+    page_title="CrisisLens | Disaster Intelligence Command Center",
     page_icon="🚨",
-
-    layout="wide"
-
+    layout="wide",
+    initial_sidebar_state="collapsed"
 )
 
-
-
 st.markdown("""
-
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-.main-title {
-
-    font-size: 42px;
-
-    font-weight: 700;
-
-    margin-bottom: 0px;
-
+:root{
+  --bg:#050b14;
+  --panel:#0a1422;
+  --panel2:#0d1929;
+  --line:rgba(148,163,184,.13);
+  --text:#f8fafc;
+  --muted:#8495aa;
+  --cyan:#22d3ee;
+  --red:#ef4444;
+  --orange:#f59e0b;
+  --yellow:#facc15;
+  --green:#22c55e;
 }
 
+html,body,[class*="css"]{font-family:Inter,Arial,sans-serif;color:#f8fafc !important}
+.stMarkdown,.stMarkdown p,.stMarkdown div,.stMarkdown span,.stText{color:#f8fafc}
+label,[data-testid="stWidgetLabel"] p{color:#e2e8f0 !important}
+.stApp{
+  background:
+    radial-gradient(circle at 78% -8%,rgba(34,211,238,.08),transparent 25%),
+    radial-gradient(circle at -5% 38%,rgba(37,99,235,.06),transparent 26%),
+    var(--bg);
+  color:var(--text);
+}
+.block-container{max-width:1500px;padding:1.25rem 1.5rem 3rem}
+[data-testid="stHeader"]{background:rgba(5,11,20,.8)}
+[data-testid="stToolbar"]{display:none}
 
+.command-header{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:linear-gradient(135deg,#0d1b2d,#081321);
+  padding:16px 20px;
+  margin-bottom:14px;
+  box-shadow:0 16px 40px rgba(0,0,0,.20);
+}
+.command-row{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-icon{
+  width:44px;height:44px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#ef4444,#991b1b);
+  box-shadow:0 8px 22px rgba(239,68,68,.2);
+  font-size:21px
+}
+.brand-title{font-size:38px;font-weight:900;letter-spacing:-1.2px;line-height:1.02;color:#ffffff !important;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.brand-sub{font-size:13px;color:#cbd5e1 !important;font-weight:700;letter-spacing:1.8px;margin-top:8px;text-transform:uppercase}
+.status{
+  display:flex;align-items:center;gap:8px;
+  border:1px solid rgba(34,197,94,.24);
+  background:rgba(34,197,94,.06);
+  color:#86efac;border-radius:999px;
+  padding:9px 13px;font-size:11px;font-weight:900;letter-spacing:1px
+}
+.status-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 9px #22c55e}
 
-.subtitle {
+.kpi{
+  min-height:88px;border:1px solid var(--line);border-radius:14px;
+  background:linear-gradient(145deg,#0d1b2d,#091321);
+  padding:13px 14px;position:relative;overflow:hidden
+}
+.kpi:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--accent)}
+.kpi-label{font-size:11px;letter-spacing:1.5px;color:#a9b8c9 !important;font-weight:900}
+.kpi-value{font-size:38px;color:#ffffff !important;font-weight:900;line-height:1;margin-top:9px}
 
-    font-size: 20px;
+.section-label{font-size:11px;line-height:1.2;letter-spacing:2px;color:#67e8f9 !important;font-weight:900;text-transform:uppercase}
+.section-title{font-size:28px;line-height:1.15;font-weight:900;color:#ffffff !important;letter-spacing:-.5px;margin:5px 0 14px;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 
-    color: #666;
+.map-card{
+  border:1px solid var(--line);border-radius:17px;
+  background:#07111e;padding:6px;overflow:hidden;
+  box-shadow:0 14px 35px rgba(0,0,0,.18)
+}
+.command-card{
+  border:1px solid var(--line);border-radius:17px;
+  background:linear-gradient(145deg,#0d1b2d,#081321);
+  padding:16px;min-height:100%
+}
+.command-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.case-id{font-size:28px;color:#ffffff !important;font-weight:900;letter-spacing:-.6px}
+.case-meta{font-size:13px;color:#b7c4d3 !important;margin-top:5px}
+.badge{display:inline-block;padding:5px 9px;border-radius:999px;font-size:10px;font-weight:900;letter-spacing:.8px}
+.critical{color:#fecaca;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.28)}
+.high{color:#fde68a;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.28)}
+.medium{color:#fef08a;background:rgba(250,204,21,.10);border:1px solid rgba(250,204,21,.24)}
+.low{color:#bbf7d0;background:rgba(34,197,94,.09);border:1px solid rgba(34,197,94,.22)}
 
-    margin-top: 0px;
+.score-box{
+  margin:12px 0;border-radius:14px;padding:14px;text-align:center;
+  border:1px solid rgba(34,211,238,.15);
+  background:radial-gradient(circle at 50% 40%,rgba(34,211,238,.10),transparent 65%)
+}
+.score{font-size:46px;color:#ffffff !important;font-weight:900;line-height:1}
+.score-caption{font-size:10px;color:#9fb0c3 !important;letter-spacing:1.5px;font-weight:900;margin-top:7px}
 
+.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.signal{
+  padding:8px 9px;border-radius:10px;
+  background:rgba(255,255,255,.025);
+  border:1px solid rgba(148,163,184,.09)
+}
+.signal-label{font-size:9px;color:#93a4b8 !important;text-transform:uppercase;letter-spacing:1px;font-weight:900}
+.signal-value{font-size:14px;color:#f8fafc !important;font-weight:800;margin-top:4px}
+
+.evidence{
+  margin-top:8px;padding:9px;border-radius:10px;
+  background:rgba(255,255,255,.022);
+  border:1px solid rgba(148,163,184,.09)
+}
+.evidence-label{font-size:9px;color:#93a4b8 !important;letter-spacing:1.2px;font-weight:900;text-transform:uppercase}
+.evidence-text{font-size:13px;color:#e2e8f0 !important;line-height:1.55;margin-top:5px}
+
+.cv-card{
+  border:1px solid var(--line);border-radius:17px;
+  background:linear-gradient(145deg,#0d1b2d,#081321);
+  padding:15px
+}
+.cv-chip{
+  display:inline-block;padding:8px 11px;border-radius:9px;margin:3px;
+  color:#dff9ff !important;background:rgba(34,211,238,.07);
+  border:1px solid rgba(34,211,238,.2);font-size:11px;font-weight:900
+}
+.image-frame{
+  border-radius:13px;overflow:hidden;
+  border:1px solid rgba(148,163,184,.14);
+  background:#050b14;padding:5px
 }
 
-
-
-.section-title {
-
-    font-size: 28px;
-
-    font-weight: 600;
-
-    margin-top: 25px;
-
+.queue-card{
+  border:1px solid var(--line);border-radius:17px;
+  background:linear-gradient(145deg,#0d1b2d,#081321);
+  padding:7px;overflow:auto
 }
+.queue{width:100%;border-collapse:separate;border-spacing:0 4px}
+.queue th{padding:9px 10px;color:#94a3b8 !important;font-size:10px;text-align:left;text-transform:uppercase;letter-spacing:1.2px;font-weight:900}
+.queue td{padding:9px;background:rgba(255,255,255,.025);border-top:1px solid rgba(148,163,184,.07);border-bottom:1px solid rgba(148,163,184,.07);font-size:12px;color:#f1f5f9 !important}
+.queue td:first-child{border-left:1px solid rgba(148,163,184,.07);border-radius:8px 0 0 8px}
+.queue td:last-child{border-right:1px solid rgba(148,163,184,.07);border-radius:0 8px 8px 0}
+.queue-score{font-weight:900;color:#ffffff !important;font-size:13px}
 
+div[data-testid="stSelectbox"]>div{background:#0a1422;border:1px solid rgba(148,163,184,.2);border-radius:10px}
+div[data-testid="stSelectbox"] [data-baseweb="select"] *{color:#f8fafc !important;font-size:15px !important}
+div[data-testid="stSelectbox"] svg{fill:#cbd5e1 !important}
+div[data-testid="stButton"] button{
+  border-radius:10px;border:1px solid rgba(34,211,238,.23);
+  background:linear-gradient(135deg,rgba(34,211,238,.09),rgba(37,99,235,.08));
+  color:#e0f2fe;font-weight:700
+}
+div[data-testid="stButton"] button:hover{border-color:rgba(34,211,238,.55)}
+.footer{text-align:center;color:#71839a;font-size:10px;letter-spacing:.7px;margin-top:18px}
+@media(max-width:900px){
+  .command-row{flex-direction:column;align-items:flex-start}
+  .signal-grid{grid-template-columns:1fr}
+}
 </style>
-
 """, unsafe_allow_html=True)
 
 
@@ -87,24 +201,22 @@ st.markdown("""
 
 
 st.markdown(
-
-    '<div class="main-title">🚨 CrisisLens</div>',
-
+    """
+    <div class="command-header">
+      <div class="command-row">
+        <div class="brand">
+          <div class="brand-icon">🚨</div>
+          <div>
+            <div class="brand-title">CRISISLENS</div>
+            <div class="brand-sub">DISASTER INTELLIGENCE COMMAND CENTER</div>
+          </div>
+        </div>
+        <div class="status"><span class="status-dot"></span>SYSTEM ONLINE</div>
+      </div>
+    </div>
+    """,
     unsafe_allow_html=True
-
 )
-
-
-
-st.markdown(
-
-    '<div class="subtitle">Disaster Intelligence Dashboard</div>',
-
-    unsafe_allow_html=True
-
-)
-
-
 
 
 
@@ -1020,594 +1132,191 @@ col4.metric(
 
 # ==========================================
 
-# INCIDENT & EXPOSURE MAP
-
+# ==========================================
+# COMMAND CENTER: MAP + INCIDENT COMMAND
 # ==========================================
 
-
-
-st.header(
-
-    "🗺️ Incident & Exposure Map"
-
+st.markdown(
+    '<div class="section-label">GEOSPATIAL COMMAND</div>'
+    '<div class="section-title">Live Incident Map</div>',
+    unsafe_allow_html=True
 )
 
+incident_options = data["incident_id"].tolist()
 
+if (
+    "selected_incident_id" not in st.session_state
+    or st.session_state["selected_incident_id"] not in incident_options
+):
+    st.session_state["selected_incident_id"] = incident_options[0]
 
-
-
-incident_options = data[
-    "incident_id"
-].tolist()
-
-
-# Keep the dropdown as a normal incident selector.
 selected_incident_id = st.selectbox(
-    "🔎 Select Incident",
-    incident_options
+    "Select incident",
+    incident_options,
+    index=incident_options.index(st.session_state["selected_incident_id"]),
+    key="incident_selector",
+    label_visibility="collapsed"
 )
 
+st.session_state["selected_incident_id"] = selected_incident_id
 
 selected_incident = data[
-    data["incident_id"]
-    == selected_incident_id
+    data["incident_id"] == selected_incident_id
 ].iloc[0]
 
-
-# ==========================================
-
-# MAP COLORS
-
-# ==========================================
-
-
-
 def get_marker_color(priority):
-
-
-
     if priority == "CRITICAL":
-
         return [255, 0, 0]
-
-
-
     elif priority == "HIGH":
-
         return [255, 140, 0]
-
-
-
     elif priority == "MEDIUM":
-
         return [255, 200, 0]
-
-
-
-    else:
-
-        return [0, 180, 0]
-
-
-
-
+    return [0, 180, 0]
 
 map_data = data.copy()
-
-
-
-
-
-map_data[
-
-    "color"
-
-] = map_data[
-
-    "priority"
-
-].apply(
-
-    get_marker_color
-
+map_data["color"] = map_data["priority"].apply(get_marker_color)
+map_data["radius"] = map_data["incident_id"].apply(
+    lambda x: 1000 if x == selected_incident_id else 500
 )
-
-
-
-
-
-map_data[
-
-    "radius"
-
-] = map_data[
-
-    "incident_id"
-
-].apply(
-
-
-
-    lambda x:
-
-
-
-        1000
-
-
-
-        if x == selected_incident_id
-
-
-
-        else 500
-
-
-
-)
-
-
-
-
-
-# ==========================================
-
-# PYDECK MAP
-
-# ==========================================
-
-
 
 layer = pdk.Layer(
-
-
-
     "ScatterplotLayer",
-
-
-
     data=map_data,
-
-
-
-    get_position=[
-
-        "longitude",
-
-        "latitude"
-
-    ],
-
-
-
+    get_position=["longitude", "latitude"],
     get_fill_color="color",
-
-
-
     get_radius="radius",
-
-
-
     pickable=True,
-
-
-
     auto_highlight=True
-
-
-
 )
-
-
-
-
 
 view_state = pdk.ViewState(
-
-
-
-    latitude=
-
-        selected_incident[
-
-            "latitude"
-
-        ],
-
-
-
-    longitude=
-
-        selected_incident[
-
-            "longitude"
-
-        ],
-
-
-
+    latitude=selected_incident["latitude"],
+    longitude=selected_incident["longitude"],
     zoom=11
-
-
-
 )
-
-
-
-
 
 deck = pdk.Deck(
-
-
-
     layers=[layer],
-
-
-
     initial_view_state=view_state,
-
-
-
     tooltip={
-
-
-
         "text":
-
             "Incident: {incident_id}\n"
-
             "Type: {disaster_type}\n"
-
             "Priority: {priority}\n"
-
             "Score: {priority_score}\n"
-
             "Urgency: {urgency}\n"
-
             "CV Severity: {cv_severity}\n"
-
-            "YOLO Image: {yolo_image}\n"
-
             "Location: {location}"
-
-
-
     }
-
-
-
 )
 
+map_col, command_col = st.columns([1.55, 1], gap="medium")
 
-
-
-
-# Clicking an incident marker selects that incident.
-# The selected incident is then used for the map view and details below.
-map_event = st.pydeck_chart(
-    deck,
-    use_container_width=True,
-    on_select="rerun",
-    selection_mode="single-object"
-)
+with map_col:
+    st.markdown('<div class="section-label">LIVE INCIDENT MAP</div>', unsafe_allow_html=True)
+    st.markdown('<div class="map-card">', unsafe_allow_html=True)
+    map_event = st.pydeck_chart(
+        deck,
+        use_container_width=True,
+        on_select="rerun",
+        selection_mode="single-object"
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
 
 if map_event and map_event.selection:
     selected_objects = map_event.selection.get("objects", [])
-
     if selected_objects:
         clicked_id = selected_objects[0].get("incident_id")
-
         if clicked_id and clicked_id in incident_options:
-            selected_incident_id = clicked_id
-
-            selected_incident = data[
-                data["incident_id"] == selected_incident_id
-            ].iloc[0]
-
-            # Rebuild the map view around the clicked incident.
+            st.session_state["selected_incident_id"] = clicked_id
             st.rerun()
 
+priority_value = str(selected_incident["priority"]).upper()
+badge_class = {
+    "CRITICAL": "critical",
+    "HIGH": "high",
+    "MEDIUM": "medium",
+    "LOW": "low"
+}.get(priority_value, "low")
 
+person_count = selected_incident.get("person_count", 0)
+car_count = selected_incident.get("car_count", 0)
+boat_count = selected_incident.get("boat_count", 0)
+cv_severity = selected_incident.get("cv_severity", "N/A")
+yolo_image_name = selected_incident.get("yolo_image", "N/A")
 
+with command_col:
+    st.markdown(f"""
+    <div class="command-card">
+      <div class="section-label">INCIDENT COMMAND</div>
+      <div class="command-top">
+        <div>
+          <div class="case-id">{selected_incident['incident_id']}</div>
+          <div class="case-meta">{selected_incident['disaster_type']} · {selected_incident['location']}</div>
+        </div>
+        <span class="badge {badge_class}">{priority_value}</span>
+      </div>
 
+      <div class="score-box">
+        <div class="score">{selected_incident['priority_score']}</div>
+        <div class="score-caption">PRIORITY SCORE / 100</div>
+      </div>
+
+      <div class="signal-grid">
+        <div class="signal"><div class="signal-label">Severity</div><div class="signal-value">{selected_incident['severity']}/100</div></div>
+        <div class="signal"><div class="signal-label">Exposure</div><div class="signal-value">{selected_incident['exposure']}/100</div></div>
+        <div class="signal"><div class="signal-label">Vulnerability</div><div class="signal-value">{selected_incident['vulnerability']}/100</div></div>
+        <div class="signal"><div class="signal-label">Urgency</div><div class="signal-value">{selected_incident['urgency']}/100</div></div>
+        <div class="signal"><div class="signal-label">Population Exposed</div><div class="signal-value">{selected_incident['population_exposed']:,}</div></div>
+        <div class="signal"><div class="signal-label">CV Adjustment</div><div class="signal-value">+{selected_incident['cv_adjustment']}</div></div>
+      </div>
+
+      <div class="evidence">
+        <div class="evidence-label">FIELD EVIDENCE</div>
+        <div class="evidence-text">{selected_incident['evidence']}</div>
+      </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 # ==========================================
-
-# SELECTED INCIDENT DETAILS
-
+# COMPUTER VISION EVIDENCE
 # ==========================================
 
-
-
-st.header(
-
-    "📋 Selected Incident"
-
+st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
+st.markdown(
+    '<div class="section-label">AI EVIDENCE LAYER</div>'
+    '<div class="section-title">Computer Vision Evidence Intelligence</div>',
+    unsafe_allow_html=True
 )
 
+cv_left, cv_right = st.columns([1.15, 1], gap="medium")
 
+with cv_left:
+    st.markdown('<div class="cv-card">', unsafe_allow_html=True)
+    st.markdown(f"""
+    <span class="cv-chip">👤 PERSONS · {person_count}</span>
+    <span class="cv-chip">🚗 VEHICLES · {car_count}</span>
+    <span class="cv-chip">🚤 BOATS · {boat_count}</span>
+    <span class="cv-chip">🧠 CV · {cv_severity}</span>
+    <div class="evidence">
+      <div class="evidence-label">MODEL SIGNAL</div>
+      <div class="evidence-text">Computer vision contributed <strong>+{selected_incident['cv_adjustment']}</strong> to final urgency.</div>
+    </div>
+    <div class="evidence">
+      <div class="evidence-label">YOLO ASSET</div>
+      <div class="evidence-text">{yolo_image_name}</div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
-
-
-col1, col2 = st.columns(2)
-
-
-
-
-
-# ==========================================
-
-# INCIDENT INFORMATION
-
-# ==========================================
-
-
-
-with col1:
-
-
-
-    st.subheader(
-
-
-
-        f"{selected_incident['incident_id']}"
-
-        f" — "
-
-        f"{selected_incident['disaster_type']}"
-
-
-
+with cv_right:
+    st.markdown('<div class="cv-card">', unsafe_allow_html=True)
+    st.markdown('<div class="section-label">ANALYTIC CONTEXT</div>', unsafe_allow_html=True)
+    st.markdown(
+        f'<div class="evidence-text">Visual detections provide supporting evidence for the incident priority assessment. Current CV severity is <strong>{cv_severity}</strong>.</div>',
+        unsafe_allow_html=True
     )
-
-
-
-    st.write(
-
-        f"📍 Location: "
-
-        f"{selected_incident['location']}"
-
-    )
-
-
-
-    st.write(
-
-        f"🎯 Priority Score: "
-
-        f"**{selected_incident['priority_score']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🚨 Priority Level: "
-
-        f"**{selected_incident['priority']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"Severity: "
-
-        f"**{selected_incident['severity']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"Exposure: "
-
-        f"**{selected_incident['exposure']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"👥 Population Exposed: "
-
-        f"**{selected_incident['population_exposed']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"Vulnerability: "
-
-        f"**{selected_incident['vulnerability']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"Base Urgency: "
-
-        f"**{selected_incident['base_urgency']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🤖 CV Adjustment: "
-
-        f"**+{selected_incident['cv_adjustment']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"⚡ Final Urgency: "
-
-        f"**{selected_incident['urgency']}**"
-
-    )
-
-
-
-
-
-# ==========================================
-
-# COMPUTER VISION EVIDENCE
-
-# ==========================================
-
-
-
-with col2:
-
-
-
-    st.subheader(
-
-        "🤖 Computer Vision Evidence"
-
-    )
-
-
-
-    person_count = selected_incident.get(
-
-        "person_count",
-
-        0
-
-    )
-
-
-
-    car_count = selected_incident.get(
-
-        "car_count",
-
-        0
-
-    )
-
-
-
-    boat_count = selected_incident.get(
-
-        "boat_count",
-
-        0
-
-    )
-
-
-
-    cv_severity = selected_incident.get(
-
-        "cv_severity",
-
-        "N/A"
-
-    )
-
-
-
-    yolo_image_name = selected_incident.get(
-
-        "yolo_image",
-
-        "N/A"
-
-    )
-
-
-
-    st.write(
-
-        f"👤 Persons Detected: "
-
-        f"**{person_count}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🚗 Cars Detected: "
-
-        f"**{car_count}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🚤 Boats Detected: "
-
-        f"**{boat_count}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🧠 CV Severity: "
-
-        f"**{cv_severity}**"
-
-    )
-
-
-
-    st.write(
-
-        f"📈 CV Urgency Adjustment: "
-
-        f"**+{selected_incident['cv_adjustment']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🖼️ YOLO Image: "
-
-        f"**{yolo_image_name}**"
-
-    )
-
-
-
-    st.write(
-
-        f"📝 Evidence: "
-
-        f"**{selected_incident['evidence']}**"
-
-    )
-
-
-
-
-
-# ==========================================
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # YOLO DETECTION IMAGE
 
@@ -1615,10 +1324,10 @@ with col2:
 
 
 
-st.subheader(
-
-    "📸 YOLO Detection Result"
-
+st.markdown(
+    '<div class="section-label">COMPUTER VISION OUTPUT</div>'
+    '<div class="section-title">YOLO Detection Evidence</div>',
+    unsafe_allow_html=True
 )
 
 
@@ -1767,226 +1476,48 @@ else:
 
 # ==========================================
 
-# TOP PRIORITY INCIDENT
-
+# ==========================================
+# RESPONSE QUEUE
 # ==========================================
 
-
-
-top_incident = data.sort_values(
-
-
-
-    "priority_score",
-
-
-
-    ascending=False
-
-
-
-).iloc[0]
-
-
-
-
-
-st.header(
-
-    "🚨 Top Priority Incident"
-
+st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
+st.markdown(
+    '<div class="section-label">RESPONSE OPERATIONS</div>'
+    '<div class="section-title">Priority Response Queue</div>',
+    unsafe_allow_html=True
 )
 
+queue = data.sort_values("priority_score", ascending=False).head(8)
+rows = []
 
+for _, incident in queue.iterrows():
+    p = str(incident["priority"]).upper()
+    cls = {
+        "CRITICAL": "critical",
+        "HIGH": "high",
+        "MEDIUM": "medium",
+        "LOW": "low"
+    }.get(p, "low")
 
-
-
-col1, col2 = st.columns(2)
-
-
-
-
-
-with col1:
-
-
-
-    st.subheader(
-
-
-
-        f"{top_incident['incident_id']}"
-
-        f" — "
-
-        f"{top_incident['disaster_type']}"
-
-
-
+    rows.append(
+        f"<tr>"
+        f"<td><strong>{incident['incident_id']}</strong></td>"
+        f"<td>{incident['disaster_type']}</td>"
+        f"<td><span class='badge {cls}'>{p}</span></td>"
+        f"<td class='queue-score'>{incident['priority_score']}</td>"
+        f"<td>{incident['location']}</td>"
+        f"<td>{incident['urgency']}</td>"
+        f"</tr>"
     )
 
-
-
-    st.write(
-
-        f"📍 Location: "
-
-        f"{top_incident['location']}"
-
-    )
-
-
-
-    st.write(
-
-        f"🎯 Priority Score: "
-
-        f"**{top_incident['priority_score']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🚨 Priority Level: "
-
-        f"**{top_incident['priority']}**"
-
-    )
-
-
-
-
-
-with col2:
-
-
-
-    st.write(
-
-        f"Severity: "
-
-        f"**{top_incident['severity']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"Exposure: "
-
-        f"**{top_incident['exposure']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"👥 Population Exposed: "
-
-        f"**{top_incident['population_exposed']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"Vulnerability: "
-
-        f"**{top_incident['vulnerability']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"Base Urgency: "
-
-        f"**{top_incident['base_urgency']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🤖 CV Adjustment: "
-
-        f"**+{top_incident['cv_adjustment']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"⚡ Final Urgency: "
-
-        f"**{top_incident['urgency']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"Evidence: "
-
-        f"**{top_incident['evidence']}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🤖 CV Severity: "
-
-        f"**{top_incident.get('cv_severity', 'N/A')}**"
-
-    )
-
-
-
-    st.write(
-
-        f"👤 Persons: "
-
-        f"**{top_incident.get('person_count', 0)}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🚗 Cars: "
-
-        f"**{top_incident.get('car_count', 0)}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🚤 Boats: "
-
-        f"**{top_incident.get('boat_count', 0)}**"
-
-    )
-
-
-
-    st.write(
-
-        f"🖼️ YOLO Image: "
-
-        f"**{top_incident.get('yolo_image', 'N/A')}**"
-
-    )
+st.markdown(
+    "<div class='queue-card'><table class='queue'>"
+    "<thead><tr><th>Incident</th><th>Type</th><th>Priority</th><th>Score</th><th>Location</th><th>Urgency</th></tr></thead>"
+    "<tbody>" + "".join(rows) + "</tbody></table></div>",
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    '<div class="footer">CRISISLENS · AI-ASSISTED DISASTER INTELLIGENCE · HACKATHON PROTOTYPE</div>',
+    unsafe_allow_html=True
+)
